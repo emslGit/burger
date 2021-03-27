@@ -1,0 +1,46 @@
+.BurgerComponent {
+    position: absolute;
+    justify-content: space-between;
+    z-index: 2;
+    top: 30px;
+    left: 30px;
+    height: 30px;
+    width: 37px;
+}
+
+.BurgerComponent:hover {
+    cursor: pointer;
+}
+
+.BurgerComponent div {
+    height: 4px;
+    border-radius: 5px;
+    width: 100%;
+    transition: 500ms;
+    background: #19ff75;
+}
+
+.BurgerComponent.x-menu div {
+    background: #282c34;
+}
+
+.BurgerComponent:hover div {
+    background: honeydew;
+}
+
+.BurgerComponent.x-menu div:first-child {
+    transform: rotate(38deg) translate(9px, 10px);
+    transform-origin: top center;
+    transition: 500ms;
+}
+
+.BurgerComponent.x-menu div:nth-child(2) {
+    transform: scale(0);
+    transition: 300ms;
+}
+
+.BurgerComponent.x-menu div:last-child {
+    transform: rotate(-38deg) translate(9px, -10px);
+    transform-origin: bottom center;
+    transition: 500ms;
+}
